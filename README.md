@@ -1,5 +1,5 @@
 # big-o-performance
-A simple html app to demonstrate performance costs of data structures.
+A simple html app to demonstrate performance costs of data structures. .
 
 - Clone the project
 - Navigate to the root of the project in a termina or command prompt
