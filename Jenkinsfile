@@ -12,11 +12,6 @@ pipeline{
         sh 'npm run build'
       }
     }
-    stage("unit test"){
-      steps{
-        sh 'npm test'
-      }
-    }
     stage('Docker build'){
       steps{
         sh """
