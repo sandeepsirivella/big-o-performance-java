@@ -23,7 +23,7 @@ pipeline{
       steps{
         script{
           sh """
-             docker run -d -p 9020:80 --name ABC madhu:1
+             docker run -d -p 9020:80 --name ABC madhu:1 .
           """
       }
     }
