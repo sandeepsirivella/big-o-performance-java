@@ -7,28 +7,30 @@ pipeline{
       }
     }
     stage("build"){
-      step{
+      steps{
         sh 'npm install'
         sh 'npm run build'
       }
     }
     stage("unit test"){
-      step{
+      steps{
         sh 'npm test'
       }
     }
     stage('Docker build'){
-      step{
+      steps{
         sh """
         docker build -t madhu:1 .
         """
       }
     }
     stage("Deploy"){
-      step{
+      steps{
         script{
           sh """
              docker run -d -p 9020:80 --name ABC madhu:1
           """
       }
     }
+  }
+}
